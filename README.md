@@ -12,7 +12,7 @@ A partir de uma base com **2.199 produtos** de um e-commerce de roupas (já trat
 
 - **Python**
 - **Pandas** — leitura e manipulação dos dados
-- **Matplotlib** — histograma, dispersão, barras e pizza
+- **Matplotlib** — histograma, dispersão, barras, pizza e grade de gráficos (subplots)
 - **Seaborn** — mapa de calor, densidade e regressão
 - **Google Colab**
 
@@ -33,10 +33,10 @@ A partir de uma base com **2.199 produtos** de um e-commerce de roupas (já trat
 
 ## 📈 Gráficos
 
-### Distribuição dos preços (histograma)
-Em quais faixas de preço está a maior parte dos produtos.
+### Distribuição dos preços e das notas (histograma + densidade)
+À esquerda, em quais faixas de preço está a maior parte dos produtos. À direita, as notas se concentram entre 4 e 5, e notas baixas são raras.
 
-![Histograma dos preços](imagens/histograma_precos.png)
+![Histograma dos preços e densidade das notas](imagens/distribuicao_preco_nota.png)
 
 ### Preço x Nota (dispersão)
 A nuvem de pontos sem direção mostra que preço e nota não têm relação.
@@ -57,11 +57,6 @@ Marcas com mais produtos anunciados na loja.
 Para qual público os produtos são direcionados.
 
 ![Pizza por gênero](imagens/pizza_genero.png)
-
-### Distribuição das notas (densidade)
-As notas se concentram entre 4 e 5; notas baixas são raras.
-
-![Densidade das notas](imagens/densidade_notas.png)
 
 ### Avaliações x Vendas (regressão)
 A linha de tendência confirma: quanto mais avaliações, mais vendas.
