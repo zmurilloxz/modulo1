@@ -21,10 +21,10 @@ A partir de uma base com **2.199 produtos** de um e-commerce de roupas (já trat
 ## 🔎 Principais achados
 
 | # | Achado |
-|---|---|
+|---|--------|
 | 1 | Metade dos produtos custa até **~R$ 79**, e a maioria fica abaixo de **R$ 140** |
 | 2 | **Preço não influencia a nota:** produtos caros não são mais bem avaliados (correlação de -0,03) |
-| 3 | **Avaliações e vendas andam juntas:** correlação de **0,90**, a mais forte da base |
+| 3 | **Avaliações e vendas andam juntas:** correlação de **0,90**, a mais forte da base (o que não indica que uma causa a outra, veja [Limitações](#️-limitações)) |
 | 4 | **Lupo** e **Stillger** são as marcas com mais produtos anunciados |
 | 5 | O público **feminino** concentra 34% dos produtos, seguido do masculino (26%) e de bebês (15%) |
 | 6 | As notas são altas: **95%** dos produtos avaliados têm nota 4 ou mais |
@@ -59,9 +59,20 @@ Para qual público os produtos são direcionados.
 ![Pizza por gênero](imagens/pizza_genero.png)
 
 ### Avaliações x Vendas (regressão)
-A linha de tendência confirma: quanto mais avaliações, mais vendas.
+Produtos com mais avaliações também aparecem com mais vendas. Isso não quer dizer que as avaliações causam as vendas (veja [Limitações](#️-limitações)).
 
 ![Regressão avaliações x vendas](imagens/regressao_avaliacoes_vendas.png)
+
+---
+
+## ⚠️ Limitações
+
+- **Correlação não indica causa:** a correlação de 0,90 entre número de avaliações e quantidade vendida não mostra que as avaliações aumentam as vendas. Como só quem compra pode avaliar, é esperado que produtos que vendem mais acumulem mais avaliações, então a relação pode ser justamente a contrária.
+- **Ausência de datas:** a base traz apenas os totais de cada produto, sem informação de quando cada venda ou avaliação aconteceu. Sem a ordem no tempo, não é possível saber o que veio primeiro.
+- **Vendas em faixas:** a quantidade vendida vem em faixas (ex.: "+1000"), e não como valor exato, o que reduz a precisão das correlações.
+
+### Como seria possível testar
+Com dados por data, daria para comparar o ritmo de vendas de um produto nas semanas antes e depois das primeiras avaliações e confrontar com produtos parecidos que ainda não tinham avaliação no mesmo período, para descontar efeitos de sazonalidade.
 
 ---
 
